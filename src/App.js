@@ -10,12 +10,15 @@ export default function App() {
   function saludar(){
     alert("Hola Niños");
   }
+  function funcionLogin() { //  Las funcionalidades las creamos en la App padre, creando una        funcion, y se la mandamos como parametro al hijo que seria un componente.
+    alert("Algo importante sobre Login");
+  }
 
   return (  
             <div>
                 {/* <Navbar config={configuracion} /> */}  {/* Una vez que escribimos aca la Navbar solo no coloca el Import, conBoton y color son las propiedades  */}
 
-                <Navbar conBoton={true} color={"#ddd"} />
+                <Navbar conBoton={true} color={"#ddd"} funcLogin={funcionLogin} />
                 <Navbar conBoton={false} color={"#00f"} />
                 <BodyApp/>
                 <Footer/>  

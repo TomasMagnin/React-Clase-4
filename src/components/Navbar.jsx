@@ -1,6 +1,6 @@
 import React from "react";          // Importamos toda la libreria de React, se hace en cada archivo.
 
-export default function Navbar({conBoton, color}) {      /* Exportamos el componente para que lo use otro archivo y lo tenemos por defecto por si tenemos mas de uno. Entre llaves colocamos las propiedades y desestructuramos la funcion para atajar las propiedades que nos envia al componente*/
+export default function Navbar({conBoton, color, funcLogin}) {      /* Exportamos el componente para que lo use otro archivo y lo tenemos por defecto por si tenemos mas de uno. Entre llaves colocamos las propiedades que recive del padre y desestructuramos la funcion para atajar las propiedades que nos envia al componente*/
     
     return ( // Dentro del return esta prohibido usar IF, ELSE, se usa operadores ternarios.
             <div style={{backgroundColor: color}}>
@@ -19,7 +19,7 @@ export default function Navbar({conBoton, color}) {      /* Exportamos el compon
                   <a href="http://google.com">Ir a Google</a>
                 </li>
               </ul>
-              {conBoton? <button>LOGIN</button> : null}
+              {conBoton? <button onClick={() => funcLogin()}>LOGIN</button> : null}  {/* Con el metodo onCLick llamamos a la funcion declarada padre, en los componentes no van funcionalidades  */}
               
             </div>
     );
