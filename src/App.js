@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';  // Importamos los componentes.
 import BodyApp from './components/BodyApp';
 import Footer from './components/Footer';
+/* import ItemListContainer from './components/ItemListContainer'; */
 
 
 export default function App() {
@@ -18,8 +19,10 @@ export default function App() {
             <div>
                 {/* <Navbar config={configuracion} /> */}  {/* Una vez que escribimos aca la Navbar solo no coloca el Import, conBoton y color son las propiedades  */}
 
+                {/* Remover lo del boton para la entrega */}
                 <Navbar conBoton={true} color={"#ddd"} funcLogin={funcionLogin} />
                 <Navbar conBoton={false} color={"#00f"} />
+                {/* <ItemListContainer /> Mandarle el saludo Greetting */}
                 <BodyApp/>
                 <Footer/>  
             </div>
